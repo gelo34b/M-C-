@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container text-center">
+    <div class="row">
+        <div class="col" style="background-color: rgba(255, 255, 255, 0.897);">
+            <section class="main">
+                <section class="articles">
+                    <article>
+                        <h2>¡Ponte en contacto con M&C!</h2>
+                    </article>
+                    <article>
+                        <h3><p>-Búscanos en facebook, twitter, instagram, email o envíanos un WhatsApp-</p></h3>
+                        <ul>
+                            <br>
+                            <h3>Facebook</h3>
+                            <p> Nos encuentras como:</li>
+                                M&C_official
+                            <center><img src="/static/images/face.png"  width="200px" height="200px"></center>
+                            </br>
+                        </ul>
+                        <ul>
+                            <br>
+                            <h3>Twitter</h3>
+                            <p> Nos encuentras como:</li>
+                                M&Coff
+                            <center><img src="/static/images/twitter.png"  width="200px" height="200px"></center>
+                            </br>
+                        </ul>
+                        <ul>
+                            <br>
+                            <h3>Instagram</h3>
+                            <p> Nos encuentras como:</li>
+                                M&C_off
+                            <center><img src="/static/images/insta.png"  width="200px" height="200px"></center>
+                            </br>
+                        </ul>
+                        <ul>
+                            <br>
+                            <h3>Email</h3>
+                            <p> Nos encuentras como:</li>
+                                M&C_sugerencias@gmail.com
+                            <center><img src="/static/images/email.png"  width="200px" height="200px"></center>
+                            </br>
+                        </ul>
+                        <ul>
+                            <br>
+                            <h3>WhatsApp</h3>
+                            <p> Teléfono:</li>
+                            449 123 45 67
+                            <center><img src="/static/images/whats.png"  width="200px" height="200px"></center>
+                            </br>
+                        </ul>
+                    </article>
+                    <article>
+                        <h2>¿Tienes algún comentario? ¡Escríbelo aquí!</h2>
+                    </article>
+                    <article>
+                        <ul>
+                            <form action="/agrega_comenta" method="post">
+                                <div class="container">
+                                    <div class="form-row">
+                                        <div class="col-xs-12 ">
+                                            <div class="mb-3">
+                                                <label for="correo" class="form-label"><center><h3>Escribe aqui tu correo electronico:</h3></center></label>
+                                                <center><input type="email" class="form-control" name="correo" id="correo" placeholder="nombre@ejemplo.com"></center>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="comentarios" class="form-label"><center><h3>Escribe tu mensaje:</h3></center></label>
+                                                <center><input type="text" class="form-control" name="comentarios" id="comentarios"></center></input>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                                <center><button type="submit" class="btn btn-primary">Enviar</button></center>
+                                </br>
+                            </form>
+                        </ul>
+                    </article>
+                </section>
+            </section>
+            <footer>
+                <p>@2022 M&C</p>
+            </footer>
+        </div>
+    </div>
+</div>
+{% endblock %}

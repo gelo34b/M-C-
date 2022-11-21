@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col" style="background-color: rgba(255, 255, 255, 0.897);">
+    <h3>
+    <CENTER> <b> Agregar Producto </b> </CENTER>
+    </h3>
+    <br>
+    <center><div class="col-md-8"></div></center>
+    <form class="row g-3" action="/registroproductos_fagrega" method="post">
+        <div class="col-md-12">
+            <label for="nomproducto" class="form-label">Ingrese el nombre del producto</label>
+            <input type="text" class="form-control" name="nomproducto" id="nomproducto" required></input>
+        </div>
+        <div class="col-md-12">
+            <label for="folio" class="form-label">Ingrese el folio</label>
+            <input type="text" class="form-control" name="folio" id="folio" required></input>
+        </div>
+        <div class="col-md-8">
+            <label for="caracteristicas" class="form-label">Ingrese las características del producto</label>
+            <input type="text" class="form-control" name="caracteristicas" id="caracteristicas" required></input>
+        </div>
+        <div class="col-md-4">
+            <label for="nomprovedor" class="form-label">Ingrese el nombre o la marca del proveedor</label>
+            <input type="text" class="form-control" name="nomprovedor" id="nomprovedor" required></input>
+        </div>
+        <div class="col-md-4">
+            <label for="exportado" class="form-label">Ingrese el país de exportación</label>
+            <input type="text" class="form-control" name="exportado" id="exportado" required></input>
+        </div>
+        <div class="col-md-4">
+            <label for="precio" class="form-label">Ingrese el precio</label>
+            <input type="text" class="form-control" name="precio" id="precio" required></input>
+        </div>
+    <div class="col-12">
+        <center><button type="submit" class="btn btn-primary">Enviar</button></center>
+    </div>
+</form>
+<br>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

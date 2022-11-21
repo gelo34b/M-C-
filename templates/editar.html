@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container text-center">
+    <div class="row">
+        <div class="col" style="background-color: rgba(255, 255, 255, 0.897);">
+            <section class="main">
+                <section class="articles">
+                    <article>
+                        <h2>¡Edita tu comentario!</h2>
+                    </article>
+                    <article>
+                        <form action="/editar_comenta/{{comentar.0}}" method="post">
+                            <div class="container">
+                                <div class="form-row">
+                                    <div class="col-xs-12 ">
+                                        <div class="mb-3">
+                                            <label for="correo" class="form-label"><center><h3>Escribe aqui tu correo electronico</h3></center></label>
+                                            <center><input type="text" class="form-control" name="correo" id="correo" placeholder="nombre@ejemplo.com" value="{{comentar.1}}"></center>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="comentarios" class="form-label"><center><h3>Escribe tu mensaje</h3></center></label>
+                                            <center><input type="text" class="form-control" name="comentarios" id="comentarios" value="{{comentar.2}}"></center></input>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <center><button type="submit" class="btn btn-primary">Actualizar</button></center>
+                            </br>
+                        </form>
+                    </article>
+                </section>
+            </section>
+            <footer>
+                <p>@2022 M&C</p>
+            </footer>
+        </div>
+    </div>
+</div>
+{% endblock %}

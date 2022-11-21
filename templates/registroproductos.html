@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col" style="background-color: rgba(255, 255, 255, 0.897);">
+    <br>
+    <center><h1><strong>Productos</strong></h1></center>
+    <center><table width="80%" border="0" cellpadding="2%"></table></center>
+    <tr>
+        <td>
+        <table class="table">
+        <thead>
+        <tr>
+            <th class="table-primary" scope="col">Productos</th>
+            <td class="table-primary"></td>
+            <td class="table-primary"><center><a class="btn btn-primary" href="/registroproductos_agregar" role="button">Agregar nuevo producto</a></center></td>
+        </tr>
+    </thead>
+    <tbody>
+        <table class="table table-striped table-primary">
+            {% for i in producto %}
+            <tr>
+                <td width="55%">{{i.1}}</td>
+                <td width="15%"><center><a class="btn btn-primary"
+                    href="/registroproductos_fdetalle/{{i.0}}" role="button">Detalle</a></center></td>
+                    <td width="15%"><center><a class="btn btn-primary"
+                        href="/registroproductos_editar/{{i.0}}" role="button">Editar</a></center></td>
+                        <td width="15%"><center><a class="btn btn-outline-primary"
+                            href="/registroproductos_borrar/{{i.0}}" role="button">Borrar</a></center></td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </tbody>
+            </table>
+    <h3><CENTER> <b> Detalle: </b> </CENTER></h3>
+    <br>
+    <form class="row g-3" action="/registroproductos_fdetalle/" method="GET">
+        <div class="col-md-12">
+            <label for="nomproducto" class="form-label">Nombre del producto</label>
+            <input type="text" class="form-control" name="nomproducto" id="nomproducto" value="{{dat.1}}"readonly="readonly"></input>
+        </div>
+        <br>
+        <div class="col-md-6">
+            <label for="folio" class="form-label">Folio</label>
+            <input type="text" class="form-control" name="folio" id="folio" value="{{dat.2}}"readonly="readonly"></input>
+        </div>
+        <div class="col-md-12">
+            <label for="caracteristicas" class="form-label">Características del producto</label>
+            <input type="text" class="form-control" name="caracteristicas" id="caracteristicas" value="{{dat.3}}"readonly="readonly"></input>
+        </div>
+        <div class="col-md-8">
+            <label for="nomprovedor" class="form-label">Nombre del provedor</label>
+            <input type="text" class="form-control" name="nomprovedor" id="nomprovedor" value="{{dat.4}}"readonly="readonly"></input>
+        </div>
+        <div class="col-md-4">
+            <label for="exportado" class="form-label">País de Exportación</label>
+            <input type="text" class="form-control" name="exportado" id="exportado" value="{{dat.5}}"readonly="readonly"></input>
+        </div>
+        <div class="col-md-4">
+            <label for="precio" class="form-label">Precio</label>
+            <input type="text" class="form-control" name="precio" id="precio" value="{{dat.6}}"readonly="readonly"></input>
+        </div>
+        <br>
+    </form>
+       </div>
+    </div>
+</div>
+{% endblock %}

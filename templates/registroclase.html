@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container">
+    <div class="row">
+    <div class="col" style="background-color: rgba(255, 255, 255, 0.897);">
+    <br>
+    <center><h1><strong>Clases</strong></h1></center>
+    <center><table width="80%" border="0" cellpadding="2%"></table></center>
+    <tr>
+        <td>
+        <table class="table">
+        <thead>
+        <tr>
+            <th class="table-primary" scope="col">Clases</th>
+            <td class="table-primary"></td>
+            <td class="table-primary"><center><a class="btn btn-primary" href="/registroclase_agregar" role="button">Agregar nueva clase</a></center></td>
+        </tr>
+    </thead>
+    <tbody>
+        <table class="table table-striped table-primary">
+            {% for i in clase %}
+            <tr>
+                <td width="55%">{{i.1}}</td>
+                <td width="15%"><center><a class="btn btn-primary"
+                    href="/registroclase_fdetalle/{{i.0}}" role="button">Detalle</a></center></td>
+                    <td width="15%"><center><a class="btn btn-primary"
+                        href="/registroclase_editar/{{i.0}}" role="button">Editar</a></center></td>
+                        <td width="15%"><center><a class="btn btn-outline-primary"
+                            href="/registroclase_borrar/{{i.0}}" role="button">Borrar</a></center></td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </tbody>
+            </table>
+    <h3><CENTER> <b> Detalle: </b> </CENTER></h3>
+    
+    <br>
+    <form class="row g-3" action="/registroclase_fdetalle/" method="GET">
+        <div class="col-md-12">
+            <label for="nomclase" class="form-label">Ingrese el nombre del la clase</label>
+            <input type="text" class="form-control" name="nomclase" id="nomclase" value="{{dat.1}}"readonly="readonly"></input>
+        </div>
+        <br>
+        <div class="col-md-6">
+            <label for="nomprofesor" class="form-label">Ingrese el nombre del profesor</label>
+            <input type="text" class="form-control" name="nomprofesor" id="nomprofesor" value="{{dat.2}}"readonly="readonly"></input>
+        </div>
+        <div class="col-md-12">
+            <label for="horario" class="form-label">Ingrese el horario</label>
+            <input type="text" class="form-control" name="horario" id="horario" value="{{dat.3}}"readonly="readonly"></input>
+        </div>
+        <div class="col-md-8">
+            <label for="precio" class="form-label">Ingrese el precio mensual</label>
+            <input type="text" class="form-control" name="precio" id="precio" value="{{dat.4}}"readonly="readonly"></input>
+        </div>
+        <div class="col-md-4">
+            <label for="instru" class="form-label">¿Cuenta con instrumento?</label>
+            <input type="text" class="form-control" name="instru" id="instru" value="{{dat.5}}"readonly="readonly"></input>
+        </div>
+        <br>
+    </form>
+</div>
+    </div>
+</div>
+{% endblock %}

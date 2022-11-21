@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="container text-center">
+    <div class="row">
+        <div class="col" style="background-color: rgba(255, 255, 255, 0.897);">
+            <section class="main">
+                <section class="articles">
+                    <article>
+                        <div id="users">
+                            <p><h3>Bienvenid@ a M&C</h3></p>
+                            <p><h3>¡Forma parte de nuestra familia :3!</h3></p>
+                            
+                            <form action="/usuarios" method="POST">
+                                <div class="container">
+                                    <div class="form-row">
+                                        <div class="col-xs-12 ">
+                                            <div class="mb-3">
+                                                <label for="correo" class="form-label">Escribe tu correo electronico</label><input type="email" class="form-input" name="correo" id="correo" placeholder="nombre@ejemplo.com">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="contrasena" class="form-label">Crea una contraseña</label>
+                                                <input type="password" class="form-input" name="contrasena" id="contrasena">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                                <button type="submit" class="btn btn-primary">Enviar</button>
+                            </form>
+                        </div>
+                    </article>
+                </section>
+            </section>
+            <br>
+            <footer>
+                <p>@2022 M&C</p>
+            </footer>
+        </div>
+    </div>
+</div>
+{% endblock %}

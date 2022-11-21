@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+{% block content %}
+   <div class="container">
+      <div class="row">
+    <div class="col" style="background-color: rgba(255, 255, 255, 0.897);">
+<h3>
+   <CENTER> <b> Clases </b> </CENTER>
+
+</h3>
+
+  <br>
+<form class="row g-3"  action="/registroclase_fedita/{{dat.0}}" method="post">
+   <div class="col-md-12">
+      <label for="nomclase" class="form-label">Ingrese el nombre de la clase</label>
+      <input type="text" class="form-control" name="nomclase" id="nomclase" value="{{dat.1}}"></input>
+   </div>
+   <div class="col-md-12">
+      <label for="nomprofesor" class="form-label">Ingrese el nombre del profesor</label>
+      <input type="text" class="form-control" name="nomprofesor" id="nomprofesor" value="{{dat.2}}" ></input>
+   </div>
+   <div class="col-md-8">
+      <label for="horario" class="form-label">Ingrese el horario</label>
+      <input type="text" class="form-control" name="horario" id="horario" value="{{dat.3}}" ></input>
+   </div>
+   <div class="col-md-4">
+      <label for="precio" class="form-label">Ingrese el precio mensual</label>
+      <input type="text" class="form-control" name="precio" id="precio" value="{{dat.4}}" ></input>
+   </div>
+   <div class="col-md-4">
+        <label for="instru" class="form-label">¿Cuenta con instrumento?</label>
+        <select name="instru" id="instru" value="{{dat.5}}" class = "form-select">
+            <option value="Si">Si</option>
+            <option value="No">No</option>
+       </select>
+   </div>
+   <div class="col-md-12">
+        <center><button type="submit" class="btn btn-primary">Actualizar</button></center>
+    </div>
+</form>
+<br>
+    </div>
+      </div>
+   </div>
+{% endblock %}
+
+
+
+
+
